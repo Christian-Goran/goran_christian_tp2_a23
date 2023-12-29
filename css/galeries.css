@@ -1,0 +1,27 @@
+#galeries{
+    background-image: linear-gradient(20deg, green, yellow)
+}
+.galerie {
+    display : flex;
+    gap : 10px; 
+    flex-wrap: wrap;
+ 
+ }
+ 
+ .galerie__figure{
+   flex: 0 1 400px;
+   border : 1px dotted #fff;
+ }
+ 
+ .galerie__img {
+     filter : grayscale(100%) drop-shadow(16px 16px 20px rgb(8, 8, 8)) ;
+ 
+     width : 100%;
+ }
+ .galerie__img:hover {
+     filter: grayscale(0);
+ }
+ 
+ .galerie__caption {
+ color: white;
+ }

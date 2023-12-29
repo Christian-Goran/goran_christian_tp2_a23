@@ -1,0 +1,116 @@
+* {
+    margin : 0;
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/*  la balise body est le conteneur principal
+     flexbox dont les enfants s'afficheront sur une colonne
+     flex-direction : column;
+*/     
+
+body{
+    display : flex;
+    flex-direction:column;
+} 
+
+/*
+opérateur de sélection « > » permet de sélectionner
+ l'enfant direct de la balise qui précède le «>»
+ La différence entre « > » et « » c'est que plus grand permet de sélectionner
+ l'enfant direct et « » permet de sélectionner l'enfant l'arrière petite enfant et ainsi de suite.
+
+ Le « > » est plus spécifique que l'aopérateur « »
+*/
+
+/*
+ C'est toujours le dernier élément de la suite qui est sélectionné. 
+ Et c'est sur cet élément qu'on applique la règle de style
+*/
+body  > div {
+    display : flex;
+    justify-content: center;
+ 
+}
+
+#accueil{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > div > section,
+body > div > footer,
+body > div > header {
+    display : flex;
+    flex: 0 1 1100px;
+    border : 1px solid #aaa;
+    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+}
+
+body > div > section {
+    display: flex;
+    flex-direction: column;
+    min-height : 100vh;
+    padding : 100px 6vw;
+}
+
+body > div > header{
+    position : relative;
+}
+
+
+/* Entete */
+body>div:nth-of-type(1){
+    background-color: gray;
+    position : sticky;
+    top : 0;
+}
+body>div:nth-of-type(2){
+    background-image: linear-gradient(20deg,violet,gray);
+}
+body>div:nth-of-type(3){
+    background-image: linear-gradient(20deg, orange,violet);
+}
+body>div:nth-of-type(4){
+    background-image: linear-gradient(20deg, blue,orange);
+}
+body>div:nth-of-type(5){
+    background-image: linear-gradient(20deg, yellow,blue);
+}
+table{
+    border-collapse: collapse;
+  }
+td, th, table {
+    border: 1px solid #999;
+}
+td,th{
+    padding: 4px;
+    font-size: 1rem;
+}
+th{
+    background-color: blueviolet;
+}
+tr{
+  border: 1px solid #000;
+}
+.global {
+    display: flex;
+    flex: 1 0 auto;
+    /* border: 1px solid #aaa; */
+    /*  align-items:stretch; */
+    justify-content: center;
+  }
+
+  h2{
+    font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+    font-family: 'Pacifico', cursive;
+}
+
+

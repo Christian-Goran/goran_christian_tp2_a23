@@ -1,0 +1,7 @@
+#videos a{
+    gap: 5px;
+   padding: 10px;
+}
+#videos{
+    background-image: linear-gradient(20deg, red, green)
+}
